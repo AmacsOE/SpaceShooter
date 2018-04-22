@@ -8,7 +8,39 @@
     android:orientation="horizontal"
     >
 
+    <Button
+        android:id="@+id/urhajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/urhajo_drawable"
+        android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/A_attack"
+        android:layout_width="84dp"
+        android:layout_height="81dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/fire_drawable"
+        app:layout_constraintBottom_toTopOf="@+id/B_attack"
+        tools:layout_editor_absoluteX="3dp" />
+
+    <Button
+        android:id="@+id/B_attack"
+        android:layout_width="63dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/fire_drawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
