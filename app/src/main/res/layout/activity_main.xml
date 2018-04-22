@@ -8,10 +8,10 @@
     android:orientation="horizontal"
     >
 
-    <Button
+    <ImageView
         android:id="@+id/urhajo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -27,20 +27,42 @@
         android:id="@+id/A_attack"
         android:layout_width="84dp"
         android:layout_height="81dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/fire_drawable"
         app:layout_constraintBottom_toTopOf="@+id/B_attack"
-        tools:layout_editor_absoluteX="3dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/B_attack"
-        android:layout_width="63dp"
-        android:layout_height="64dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginStart="24dp"
+        android:layout_width="50dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="40dp"
         android:background="@drawable/fire_drawable"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/balra_fordul"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/fordul_drawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/jobbra_fordul" />
+
+    <Button
+        android:id="@+id/jobbra_fordul"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/fordul_drawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 
 </android.support.constraint.ConstraintLayout>
