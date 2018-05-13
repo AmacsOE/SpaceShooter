@@ -1,77 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="projectone.spaceshooter.MainActivity"
-    android:orientation="horizontal"
-    >
 
+    android:background="@drawable/splash"
+    tools:context=".MainActivity">
 
-    <ViewFlipper
-        android:id="@+id/urhajo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:elevation="5dp"
-        android:flipInterval="100"
-        android:rotation="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ImageButton
+        android:id="@+id/buttonPlay"
+        android:background="@drawable/playnow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonScore"
+        android:layout_centerHorizontal="true" />
 
-        <ImageView
-            android:background="@drawable/battleship0"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+    <ImageButton
+        android:id="@+id/buttonScore"
+        android:background="@drawable/highscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
-        <ImageView
-            android:background="@drawable/battleship1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-    </ViewFlipper>
-
-    <Button
-        android:id="@+id/A_attack"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/fire_drawable"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    <Button
-        android:id="@+id/balra_fordul"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="28dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/jobbra_fordul"
-        android:rotation="90"/>
-
-    <Button
-        android:id="@+id/jobbra_fordul"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="28dp"
-        android:layout_marginEnd="28dp"
-        android:background="@drawable/arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:rotation="-90"/>
-
-
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
