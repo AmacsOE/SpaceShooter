@@ -14,8 +14,9 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    //image button
+
     private ImageButton buttonPlay;
+    private ImageButton buttonScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,23 +25,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //teljes képernyős mód
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_main);
-
-        //setting the orientation to landscape
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
-        //getting the button
         buttonPlay = (ImageButton) findViewById(R.id.buttonPlay);
+        buttonScore = (ImageButton) findViewById(R.id.buttonScore);
+        buttonScore.setOnClickListener(this);
 
-        //adding a click listener
         buttonPlay.setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View v) {
 
-        //starting game activity
-        startActivity(new Intent(this, GameActivity.class));
+        if (v == buttonPlay) {
+            startActivity(new Intent(MainActivity.this, GameActivity.class));
+        }
+        if (v == buttonScore) {
+
+            startActivity(new Intent(MainActivity.this, HighScore.class));
+        }
+
+
     }
 }
